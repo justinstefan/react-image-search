@@ -8,7 +8,7 @@ textarea:focus, input:focus{
 
 body {
   margin: 0;
-  background: #ddd;
+  background: linear-gradient(to right, rgb(84, 74, 125), rgb(255, 212, 82));
   font-family: Arial;
 }
 
@@ -32,11 +32,6 @@ body {
   max-width: 25%;
   padding: 0 4px;
 
-  img {
-    margin-top: 8px;
-    vertical-align: middle;
-    width: 100%;
-  }
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
@@ -70,6 +65,7 @@ body {
   right: 0;
   top: 30vh;
   background: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,.22);
   
   input {
     flex: 1;
