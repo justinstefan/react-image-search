@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+}
+
+textarea:focus, input:focus{
+  outline: none;
+}
+
+body {
+  margin: 0;
+  background: #ddd;
+  font-family: Arial;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 1rem;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+
+  img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+.input-wrap {
+  height: 5rem;
+  width: 40%;
+  min-width: 300px;
+  display: flex;
+  margin: auto;
+  padding: 0;
+  transition: all .5s;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 30vh;
+  background: #fff;
+  
+  input {
+    flex: 1;
+    height: 100%;
+    border: 0;
+    font-size: 1em;
+    bottom: 0;
+    margin: auto;
+    padding: 1.5rem;
+    color: #202121;
+  }
+  
+  &.focused {
+    width: 100%;
+    top: 0;
+
+    input {
+      margin-bottom: auto;
+    }
+  }
+}
+
